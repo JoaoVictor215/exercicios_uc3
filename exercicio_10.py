@@ -25,7 +25,7 @@ if praias_nao_asfaltadas:
 else:
     media_veranistas_nao_asfaltadas = 0
 
-praias_asfaltadas_com_poucos = [(p["nome"], p["distancia"])for p in [praias] if p["acesso"] == 1 and p["veranistas"]<1000]
+praias_asfaltadas_com_poucos = [(p["nome"], p["distancia"]) for p in praias if p["acesso"] == 1 and p["veranistas"] < 1000]
 
 print("Resultados:")
 print("a) Número de praias a mais de 15km do centro:", num_praias_mais_15km)
