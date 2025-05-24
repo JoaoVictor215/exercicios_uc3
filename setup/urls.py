@@ -17,9 +17,15 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import include, path
 
+from django.views.generic import TemplateView
+
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('tiposdeatividade/', include("tiposdeatividade.urls") ),
+
+    path('', TemplateView.as_view(template_name='escola.html')),
+
+    path('tiposdeatividade/', include("tiposdeatividade.urls")),
+    path('aluno/', include("aluno.urls", namespace='aluno'))
     path('', include("tiposdeatividade.urls") ),
     path('aluno/', include('aluno.urls')),
     path('instrutor/', include('instrutor.urls')),
@@ -27,3 +33,7 @@ urlpatterns = [
     path('turma/', include('turma.urls')),
     path('utilitarios/', include('utilitarios.urls')),
 ]
+
+
+# Linha 20, from django.views.generic import TemplateView
+# Linha 25, path('', TemplateView.as_view(template_name='escola.html')),

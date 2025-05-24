@@ -124,12 +124,18 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
 STATIC_URL = 'static/'
-STATIC_DIRS = [
+STATICFILES_DIRS = [
     BASE_DIR / STATIC_URL, 
 ]
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+
+#ALterou linha 127, STATICFILES_DIRS
+#Alterou linha 130, 'staticfiles'
+#Linha 14 adicionar import os
