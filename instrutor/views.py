@@ -1,5 +1,8 @@
-from django.shortcuts import HttpResponse
+from django.shortcuts import render
 
 # Create your views here.
-def instrutor(request):
-    return HttpResponse("Olá! Eu sou o Instrutor")
+def listarInstrutor(request):
+    return render(request, 'instrutor/listarInstrutor.html')
+
+def cadastroInstrutor(request):
+    return render(request, 'instrutor/cadastrarInstrutor.html')
