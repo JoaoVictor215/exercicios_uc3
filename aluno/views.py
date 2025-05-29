@@ -4,7 +4,7 @@ from django.shortcuts import render
 def listar(request):
     return render(request, 'aluno/listarAlunos.html')
 
-def cadastro(request):
-    return render(request, 'aluno/cadastroAluno.html')
+def cadastrar(request):
+    return render(request, 'aluno/cadastrarAluno.html')
     
     

@@ -1,5 +1,8 @@
-from django.shortcuts import HttpResponse
+from django.shortcuts import render
 
 # Create your views here.
-def titulo(request):
-    return HttpResponse("Olá! Eu sou o titulo")
+def listar(request):
+    return render(request, 'titulo/listarTitulos.html')
+
+def cadastrar(request):
+    return render(request, 'titulo/cadastrarTitulos.html')

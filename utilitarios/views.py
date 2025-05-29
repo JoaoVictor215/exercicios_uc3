@@ -1,5 +1,5 @@
-from django.shortcuts import HttpResponse
+from django.shortcuts import render
 
 # Create your views here.
-def utilitarios(request):
-    return HttpResponse("Olá! Eu sou o utilitario")
+def contato(request):
+    return render(request, 'contato/contato.html')
